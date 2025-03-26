@@ -91,3 +91,20 @@ e trocando as configurações no arquivo application.properties.
 `GRANT CREATE ON DATABASE ms_pedido TO admin;`
 `GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA public TO admin;`
 `GRANT ALL PRIVILEGES ON SCHEMA public TO admin;`
+
+### Configuração do RabbitMQ
+
+- Usar na Controller classe RabbitTemplate;
+- Configurar propriedades no arquivo `application.properties`
+
+#### Criação do Broker no CloudAMQP
+
+[Site CloudAMQP](https://www.cloudamqp.com/)
+
+Login criado com conta do github. Plano Free disponível, criar time ou utilizar algum (se já criado).
+
+Configurar uma nova instância com nome, provedor, região, validar sempre que o plano gratuito foi selecionado!
+
+Criamos um novo Exchange (fila) através do site do CloudAMQP, pelo portal do LavinMQ disponível ao acessar a instância.
+
+Acessando a opção `Exchanges` no menu lateral esquerdo, fica disponível uma lista com 6 exchanges default e logo abaixo a opção para criar um novo. Definimos o nome e ja podemos clicar em `Add exchange`, ou se for o caso, podemos trocar o tipo de exchange, por default, vem selecionado o tipo `direct`.
