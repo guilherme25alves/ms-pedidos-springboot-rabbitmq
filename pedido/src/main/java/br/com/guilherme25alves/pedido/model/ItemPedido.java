@@ -1,5 +1,7 @@
 package br.com.guilherme25alves.pedido.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,6 +27,8 @@ public class ItemPedido {
 
     @ManyToOne
     @JoinColumn(name = "pedido_id")
+    @JsonBackReference // usado para evitar erros na hora de serializar o objeto para envio (estamos
+                       // enviando id e descrição)
     private Pedido pedido;
 
     public Long getId() {

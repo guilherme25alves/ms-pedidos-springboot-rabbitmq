@@ -2,6 +2,8 @@ package br.com.guilherme25alves.pedido.model;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,6 +21,8 @@ public class Pedido {
     private String descricao;
 
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
+    @JsonManagedReference // usado para evitar erros na hora de serializar o objeto para envio (estamos
+                          // enviando id e descrição)
     private List<ItemPedido> itens;
 
     public Long getId() {

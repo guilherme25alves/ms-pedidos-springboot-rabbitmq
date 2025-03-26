@@ -108,3 +108,16 @@ Configurar uma nova instância com nome, provedor, região, validar sempre que o
 Criamos um novo Exchange (fila) através do site do CloudAMQP, pelo portal do LavinMQ disponível ao acessar a instância.
 
 Acessando a opção `Exchanges` no menu lateral esquerdo, fica disponível uma lista com 6 exchanges default e logo abaixo a opção para criar um novo. Definimos o nome e ja podemos clicar em `Add exchange`, ou se for o caso, podemos trocar o tipo de exchange, por default, vem selecionado o tipo `direct`.
+
+
+#### Testes com projetos
+
+Abrir em abas diferentes no VSCode ou usar VSCode + IntelliJ para rodar paralelamente, abrir os 2 na mesma workspace pode dar conflitos.
+
+Se preferir e não precisar de Debug, utilize o terminal (Windows terminal ou do VSCode ou IntelliJ) e inicialize na pasta de cada projeto individualmente via CLI com maven através do comando:
+
+`mvn spring-boot:run`
+
+Caso precise atualizar o projeto, instalar dependências:
+
+`mvn clean install`

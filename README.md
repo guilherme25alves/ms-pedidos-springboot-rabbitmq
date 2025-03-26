@@ -26,3 +26,19 @@ Dependências:
 - Spring Data JPA
 - PostgreSQL Driver
 - Spring for RabbitMQ
+
+#### Projeto processamento
+
+Reponsável por processar o pedido que foi cadastrado pelo outro microserviço.
+
+Desenvolvido com Java versão 17 e com Maven como gerenciador de dependências.
+
+Versão do Spring Boot = 3.4.4
+
+Dependências:
+
+- Spring Web
+- Spring Boot Dev Tools
+- Spring Data JPA
+- PostgreSQL Driver
+- Spring for RabbitMQ

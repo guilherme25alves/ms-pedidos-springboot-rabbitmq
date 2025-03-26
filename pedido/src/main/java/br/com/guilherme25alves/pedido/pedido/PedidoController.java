@@ -31,7 +31,7 @@ public class PedidoController {
     @PostMapping
     public String salvarPedido(@RequestBody Pedido pedido) {
         Pedido pedidoSalvo = pedidoService.salvarPedido(pedido);
-        rabbitTemplate.convertAndSend("", routingKey, pedidoSalvo.getDescricao());
+        rabbitTemplate.convertAndSend("", routingKey, pedidoSalvo);
         return "Pedido salvo e enviado para a fila para processamento: " + pedidoSalvo.getDescricao();
     }
 

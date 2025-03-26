@@ -1,0 +1,21 @@
+### Variáveis 
+@apiurl = http://localhost:8081
+
+### POST criar Produto
+POST {{apiurl}}/pedidos HTTP/1.1
+Content-Type: application/json
+
+{
+    "descricao" : "Pedido teste 3",
+    "itens" : [
+        {
+            "nome" : "Produto 1",
+            "quantidade" : 1
+        },
+        {
+            "nome" : "Produto 4",
+            "quantidade" : 3
+        }
+    ]
+}
+
