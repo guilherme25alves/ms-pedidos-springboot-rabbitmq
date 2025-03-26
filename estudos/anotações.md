@@ -121,3 +121,13 @@ Se preferir e não precisar de Debug, utilize o terminal (Windows terminal ou do
 Caso precise atualizar o projeto, instalar dependências:
 
 `mvn clean install`
+
+#### Interações com GIT 
+
+O projeto foi clonado com HTTP, mas, o git depreciou o acesso com usuário/senha, para enviar comandos ao repositório remoto utilizar estrutura:
+
+`git <comando> https://<token-git-presente-pasta-arquivos-wsl>@github.com/guilherme25alves/ms-pedidos-springboot-rabbitmq.git`
+
+Exemplo:
+
+`git push https://<token-mock>@github.com/guilherme25alves/ms-pedidos-springboot-rabbitmq.git`
